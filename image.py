@@ -17,9 +17,9 @@ def color_text(text, color):
 os.system("clear")
 def get_image_from_path(path):
     with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
-        task = progress.add_task("LOADING TO OPEN SCRIPT", total=None)
+        task = progress.add_task("LOADING MEMBUKA SCRIPT", total=None)
         if os.path.isfile(path):
-            progress.update(task, description="File ready bosku")
+            progress.update(task, description="FILE READY")
             return path
         elif os.path.isdir(path):
             images = [f for f in os.listdir(path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
@@ -78,22 +78,22 @@ def display_result(ascii_art, save_path=None):
             f.write(ascii_art)
         console.print(
             Panel(
-                f"999 DIZ FLYZE 999 SV DATA KE : {save_path}",
+                f"999 ABDILLAH404 SV DATA KE : {save_path}",
                 border_style="green",
                 title="Sukses",
             )
         )
     else:
-        console.print(Panel(ascii_art, title="[ 999 DIZ FLYZE 999 ]", border_style="cyan"))
+        console.print(Panel(ascii_art, title="[ ABDILLAH404 ]", border_style="cyan"))
 
 # Home
 os.system("clear")
 def main():
     # Header
-    console.print(Panel("[bold cyan]SCRIPT CREATE TEKS GAMBAR[/bold cyan]\n[italic green]DIZ FLYZE DEVELOPER SCRIPT TEKS TO IMAGE[/italic green]", title="[ DIZ FLYZE ]", border_style="blue"))
+    console.print(Panel("[bold cyan]SCRIPT CREATE TEKS GAMBAR[/bold cyan]\n[italic green]HAFIDZ ABDILLAH PEMGEMBANG SCRIPT TEKS TO IMAGE[/italic green]", title="[ ABDILLAH404 ]", border_style="blue"))
 
     # pararg
-    parser = ArgumentParser(description="DIZ FLYZE DEVELOPER SCRIPT")
+    parser = ArgumentParser(description="HAFIDZ ABDILLAH PENGEMBANG SCRIPT")
     parser.add_argument("path", type=str, nargs="?", default=".", help="Path ke file atau folder gambar (default: current directory).")
     parser.add_argument("--width", type=int, default=40, help="LEBAR LAYAR")
     parser.add_argument("--save", type=str, help="SV KE INTERNAL")
